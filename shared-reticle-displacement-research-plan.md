@@ -12,7 +12,7 @@ The displacement is assumed to be caused by reticle heating.
 
 ### 2.1 Priority Route: TIS-Based Detection Using Overlay Marks
 
-Key points to track:
+Key points to investigate:
 
 - whether overlay-marks can generate a usable TIS signal;
 - sensitivity to in-plane displacement; **aim for "<0.1 nm"**
@@ -23,9 +23,7 @@ Key points to track:
 
 Key points to study:
 
-- diffraction efficiency of EUV reticle gratings under visible or IR illumination;
-- whether the diffracted signal is strong enough for interferometric displacement detection;
-- dependence on wavelength, polarization, incidence angle, pitch, duty cycle, absorber, and multilayer stack.
+- **diffraction efficiency** of EUV reticle gratings under visible or IR light; whether the signal is strong enough for interferometric displacement detection;
 
 ### 2.3 Other Candidate Routes
 
@@ -34,55 +32,35 @@ Other routes may include:
 - interferometric or holographic detection of out-of-plane displacement;
 - projected or aerial-image displacement measurement.
 
-## 3. First Feasibility Plan
+## 3. First Validation Plan
 
-The first feasibility check should use known, imposed, or simulated displacement, so that the detection result can be evaluated clearly.
-
-Suggested comparison cases:
-
-- clean grating;
-- isolated overlay mark;
-- overlay mark with nearby circuit-like patterns;
-- optional coded or non-periodic mark.
-
-Evaluation criteria:
-
-- minimum detectable displacement;
-- sensitivity and linearity;
-- repeatability;
-- bias;
-- false-positive behavior;
-- robustness to focus, tilt, illumination drift, and neighboring patterns.
-
-## 4. Current Decisions and Open Questions
-
-### Current Decisions
-
-| Item | Current Status |
-|---|---|
-| Main target | Detect local reticle displacement |
-| Displacement origin | Heating-induced displacement |
-| First-stage validation | Known / imposed / simulated displacement |
-| Priority route | TIS-based detection using overlay marks |
-| Baseline | Clean grating |
-| Full reconstruction | Not the first-stage target |
-
-### Open Questions
-
-| Question | Owner | Status / Next Step |
+| Stage | Test Case | Purpose |
 |---|---|---|
-| Final overlay mark geometry? |  |  |
-| Expected displacement range? |  |  |
-| Simulation-only or simulation plus experiment? |  |  |
-| Available wavelength / NA / illumination condition? |  |  |
-| Diffraction efficiency of EUV reticle gratings under visible / IR illumination? |  |  |
-| How should nearby circuit patterns be modeled? |  |  |
+| 1 | Isolated grating with known displacement | Baseline sensitivity and noise floor |
+| 2 | Isolated OVL mark with known displacement | Feasibility of OVL-mark TIS |
+| 3 | Overlay mark with nearby circuit-like patterns | Stray-signal bias and robustness |
+| 4 | Optional coded or non-periodic mark | Possible improvement over periodic marks |
+
+Key outputs:
+
+- sensitivity -- minimum detectable displacement;
+- influence of neighboring pattern;
+
+## 4. Known Parameters
+
+### OVL-Mark Geometry
+
+| Parameter | Wafer Plane | Reticle Plane |
+|---|---:|---:|
+| Pitch | 0.5-1 um | 2-4 um |
+| Mark size | 8-16 um | 32-64 um |
+| Reduction |  | 4x reticle-to-wafer |
 
 ## Appendix A. Meeting Notes
 
 Meeting notes should be kept here, not in the main body.
 
-### Meeting: 2026-05-26 - EUV Reticle Structure and Priority Routes
+### Meeting with Wenjie: 2026-05-26 - EUV Reticle Structure and Priority Routes
 
 **Discussed**
 
